@@ -15,6 +15,6 @@ while (1)
   next
   iPercent = ((iRemaining / iFull) * 100) mod 100
   if bCharging and (iPercent > 90) Then msgbox "A Bateria atingiu " & iPercent & "%",vbInformation, "Informação da Bateria"
-  if bCharging and (iPercent < 30) Then msgbox "A Bateria atingiu " & iPercent & "%, conecte o carregador!",vbInformation, "Informação da Bateria"
+  if Not bCharging and (iPercent < 30) Then msgbox "A Bateria atingiu " & iPercent & "%, conecte o carregador!",vbInformation, "Informação da Bateria"
   wscript.sleep 30000 ' 5 minutes
 wend
